@@ -1,0 +1,16 @@
+# ملفات البناء
+/build/
+/out/
+
+# ملفات IDE
+*.iml
+.idea/
+*.class
+
+# ملفات NetBeans
+nbproject/private/
+*.log
+
+# تجاهل ملفات NetBeans الخاصة بالمطور
+nbproject/private/
+nbproject/private/*.properties
