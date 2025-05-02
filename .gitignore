@@ -14,3 +14,8 @@ nbproject/private/
 # تجاهل ملفات NetBeans الخاصة بالمطور
 nbproject/private/
 nbproject/private/*.properties
+
+# تجاهل جميع الملفات داخل nbproject
+nbproject/*
+# استثناء الملفات التي تريد الاحتفاظ بها (إن وجدت)
+!nbproject/project.xml
