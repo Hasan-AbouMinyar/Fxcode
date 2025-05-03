@@ -28,6 +28,8 @@ public class SceneFx extends Application {
         des.setY(50);
         des.setFont(Font.font("Verdana",50));
         
+        // stopped the tutorial video on 4:17th minute
+        
         root.getChildren().add(des);
         
         stage.setScene(scene);
