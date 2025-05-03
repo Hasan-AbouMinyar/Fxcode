@@ -19,3 +19,7 @@ nbproject/private/*.properties
 nbproject/*
 # استثناء الملفات التي تريد الاحتفاظ بها (إن وجدت)
 !nbproject/project.xml
+/dist/
+
+# تجاهل ملف Fxcode.java
+src/fxcode/Fxcode.java
