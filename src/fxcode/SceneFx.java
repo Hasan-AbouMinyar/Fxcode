@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -25,6 +26,7 @@ public class SceneFx extends Application {
         des.setText("this is an application");
         des.setX(50);
         des.setY(50);
+        des.setFont(Font.font("Verdana",50));
         
         root.getChildren().add(des);
         
