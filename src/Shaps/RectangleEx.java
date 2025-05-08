@@ -1,5 +1,6 @@
 
-package fxcode;
+package Shaps;
+
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -13,11 +14,12 @@ import javafx.stage.StageStyle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeLineCap;
 
 
 
-public class ex extends Application {
+public class RectangleEx extends Application {
     
     public static void main (String [] args){
         
@@ -34,19 +36,15 @@ public class ex extends Application {
        scene.setFill(Color.LIGHTSEAGREEN);
        stage.setScene(scene);
        stage.show();
-       
-       Line ln = new Line();
-       ln.setStartX(50);
-       ln.setStartY(200);
-       ln.setEndX(700);
-       ln.setEndY(200);
-       ln.setStrokeWidth(20);
-       ln.setStroke(Color.GREEN);
-       ln.setStrokeLineCap(StrokeLineCap.ROUND);
-       ln.getStrokeDashArray().addAll(50d,50d);
-       
-       
-       root.getChildren().add(ln);
+      
+       Rectangle rect = new Rectangle();
+        rect.setX(0);       // إحداثيات الزاوية العلوية اليسرى (X)
+        rect.setY(50);       // إحداثيات الزاوية العلوية اليسرى (Y)
+        rect.setWidth(750);  // عرض المستطيل
+        rect.setHeight(100); // ارتفاع المستطيل
+        rect.setFill(Color.BLUE); // لون التعبئة
+        
+       root.getChildren().add(rect);
         
     }
 

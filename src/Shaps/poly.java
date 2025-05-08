@@ -1,5 +1,9 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Shaps;
 
-package fxcode;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -13,11 +17,15 @@ import javafx.stage.StageStyle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeLineCap;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Polygon;
 
 
 
-public class ex extends Application {
+public class poly extends Application {
     
     public static void main (String [] args){
         
@@ -31,22 +39,26 @@ public class ex extends Application {
        Group root = new Group();
        Scene scene = new Scene(root,800,600);
        stage.setTitle("This an example of Line");
-       scene.setFill(Color.LIGHTSEAGREEN);
+       scene.setFill(Color.WHITE);
        stage.setScene(scene);
        stage.show();
        
-       Line ln = new Line();
-       ln.setStartX(50);
-       ln.setStartY(200);
-       ln.setEndX(700);
-       ln.setEndY(200);
-       ln.setStrokeWidth(20);
-       ln.setStroke(Color.GREEN);
-       ln.setStrokeLineCap(StrokeLineCap.ROUND);
-       ln.getStrokeDashArray().addAll(50d,50d);
+       Polygon g = new Polygon();
        
-       
-       root.getChildren().add(ln);
+//       g.getPoints().addAll(new Double[]{
+//           400.0,50.0,
+//           550.0,150.0,
+//           400.0,250.0,
+//           250.0,150.0,
+//       });
+g.getPoints().addAll(new Double[]{
+           300.0,50.0,
+           150.0,50.0,
+           50.0,250.0,
+           400.0,250.0,
+       });
+      
+       root.getChildren().addAll(g);
         
     }
 
