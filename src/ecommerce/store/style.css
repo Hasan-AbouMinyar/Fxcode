@@ -1,0 +1,160 @@
+.root {
+    -fx-background-color: #f5f5f7;
+    -fx-font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+}
+
+.header {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-padding: 0 22px;
+}
+
+.nav-link {
+    -fx-text-fill: #f5f5f7;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.nav-link:hover {
+    -fx-text-fill: #fff;
+}
+
+.cart-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.cart-badge {
+    -fx-background-color: #ff2d55;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 2px 5px;
+    -fx-background-radius: 10px;
+    -fx-min-width: 18px;
+    -fx-min-height: 18px;
+    -fx-alignment: center;
+}
+
+.categories {
+    -fx-background-color: #f5f5f7;
+    -fx-border-color: #d2d2d7;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.category-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1d1d1f;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+}
+
+.category-btn:hover {
+    -fx-text-fill: #06c;
+}
+
+.product-scroll {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.product-card {
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.product-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.product-name {
+    -fx-text-fill: #1d1d1f;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.product-price {
+    -fx-text-fill: #1d1d1f;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.add-to-cart {
+    -fx-background-color: #0071e3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 18px;
+    -fx-cursor: hand;
+}
+
+.add-to-cart:hover {
+    -fx-background-color: #0077ed;
+}
+
+.cart-view {
+    -fx-background-color: #f5f5f7;
+}
+
+.cart-title {
+    -fx-text-fill: #1d1d1f;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.empty-cart {
+    -fx-text-fill: #86868b;
+    -fx-font-size: 18px;
+    -fx-padding: 50px;
+}
+
+.cart-table {
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.total-label {
+    -fx-text-fill: #1d1d1f;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.checkout-btn {
+    -fx-background-color: #0071e3;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 18px;
+    -fx-cursor: hand;
+}
+
+.checkout-btn:hover {
+    -fx-background-color: #0077ed;
+}
+
+.back-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #06c;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.back-btn:hover {
+    -fx-text-fill: #2997ff;
+}
+
+.toast {
+    -fx-background-color: rgba(0,0,0,0.8);
+    -fx-text-fill: white;
+    -fx-background-radius: 18px;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
