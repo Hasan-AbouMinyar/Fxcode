@@ -4,18 +4,121 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.chart.PieChart; // مثال لاستخدام الرسوم البيانية
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView; // مثال لاستخدام قائمة
+import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.collections.FXCollections; // لاستخدام PieChart
-import javafx.collections.ObservableList; // لاستخدام PieChart
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class MainDashboardApp extends Application {
+
+    // 1. تضمين محتوى CSS بالكامل كـ String
+    private static final String DASHBOARD_CSS = """
+        /* ملف dashboard.css مضمّن */
+
+        /* ستايل للعنصر الجذر (الـ BorderPane) */
+        .root {
+            -fx-background-color: #f4f4f4; /* لون خلفية فاتح */
+        }
+
+        /* ستايل للشريط الجانبي */
+        .sidebar {
+            -fx-background-color: #333; /* لون خلفية داكن */
+            -fx-padding: 20px; /* هامش داخلي */
+            -fx-spacing: 10px; /* مسافة بين العناصر */
+        }
+
+        .sidebar-title {
+            -fx-text-fill: #fff; /* لون النص أبيض */
+            -fx-font-size: 20px;
+            -fx-font-weight: bold;
+            -fx-padding-bottom: 10px; /* مسافة أسفل العنوان */
+        }
+
+        .sidebar .button {
+            -fx-background-color: #555; /* لون خلفية للأزرار */
+            -fx-text-fill: #fff; /* لون النص أبيض */
+            -fx-font-size: 14px;
+            -fx-padding: 10px;
+            -fx-alignment: CENTER_LEFT; /* محاذاة النص لليسار */
+        }
+
+        /* تأثير عند مرور الفأرة على أزرار الشريط الجانبي */
+        .sidebar .button:hover {
+            -fx-background-color: #777;
+        }
+
+        /* ستايل لمنطقة المحتوى الرئيسية */
+        .main-content {
+            -fx-padding: 20px; /* هامش داخلي */
+            -fx-spacing: 20px; /* مسافة بين الأقسام الرئيسية */
+        }
+
+        /* ستايل لقسم الملخصات السريعة */
+        .summary-cards {
+            -fx-spacing: 20px; /* مسافة بين البطاقات */
+        }
+
+        /* ستايل لبطاقة الملخص الواحدة */
+        .summary-card {
+            -fx-background-color: #fff; /* لون خلفية أبيض */
+            -fx-padding: 15px; /* هامش داخلي */
+            -fx-border-radius: 5px; /* زوايا مستديرة */
+            -fx-background-radius: 5px;
+            -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5); /* ظل خفيف */
+            -fx-min-width: 200px; /* عرض أدنى للبطاقة */
+            -fx-grow: always; /* للسماح للبطاقات بالتمدد إذا لزم الأمر داخل HBox */
+        }
+
+        .summary-card-title {
+            -fx-font-size: 14px;
+            -fx-text-fill: #666; /* لون نص رمادي */
+        }
+
+        .summary-card-value {
+            -fx-font-size: 24px;
+            -fx-font-weight: bold;
+            -fx-text-fill: #333; /* لون نص داكن */
+        }
+
+        /* ستايل لعناوين الأقسام (ملخص الأداء، أحدث الطلبات) */
+        .section-title {
+            -fx-font-size: 18px;
+            -fx-font-weight: bold;
+            -fx-padding-bottom: 10px;
+            -fx-border-color: #eee; /* خط سفلي خفيف */
+            -fx-border-width: 0 0 1px 0;
+        }
+
+        /* ستايل للرسم البياني */
+        .dashboard-chart {
+            /* يمكنك إضافة ستايلات محددة للرسوم البيانية هنا */
+        }
+
+        /* ستايل لقائمة أحدث الطلبات */
+        .recent-orders-list {
+            /* ستايلات للـ ListView */
+            -fx-border-color: #eee;
+            -fx-border-width: 1px;
+            -fx-background-color: #fff;
+        }
+
+        .recent-orders-list .list-cell {
+            /* ستايل لكل عنصر في القائمة */
+            -fx-padding: 10px;
+            -fx-border-color: #eee; /* خط فاصل بين العناصر */
+            -fx-border-width: 0 0 1px 0;
+        }
+
+        .recent-orders-list .list-cell:last-child {
+             -fx-border-width: 0; /* إزالة الخط الفاصل لآخر عنصر */
+        }
+        """; // نهاية الـ String المتعدد الأسطر (يتطلب Java 15+)
 
     @Override
     public void start(Stage primaryStage) {
@@ -104,9 +207,9 @@ public class MainDashboardApp extends Application {
 
         // إعداد المشهد (Scene)
         Scene scene = new Scene(root, 1000, 700); // حجم النافذة
-        // تحميل ملف CSS
-        scene.getStylesheets().add(getClass().getResource("/dashboard.css").toExternalForm());
 
+        // 2. تطبيق الـ String الذي يحتوي على CSS مباشرة على المشهد
+        scene.getStylesheets().add(DASHBOARD_CSS);
 
         primaryStage.setScene(scene); // تعيين المشهد للمرحلة (النافذة)
         primaryStage.show(); // عرض النافذة
