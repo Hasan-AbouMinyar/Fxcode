@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 public class button extends Application {
@@ -21,13 +22,17 @@ public class button extends Application {
         
         
         thisstage.setTitle("this is will show button");
-        Group hold = new Group(new Button("show this button"));
-        Scene tohold = new Scene(hold,1000,1000,Color.BLUE);
-        thisstage.setWidth(400.0);
-        thisstage.setHeight(400.0);
+        Group hold = new Group();
+        Scene tohold = new Scene(hold,300,300,Color.LIGHTBLUE);
+        
+        thisstage.initStyle(StageStyle.UNIFIED);
+        
+        Button bt = new Button();
+        bt.setText("good luck");
+       
         thisstage.setScene(tohold);
         
-        //thisstage.setFullScreen(true);
+//        thisstage.setFullScreen(true);
         
         thisstage.show();
         
