@@ -27,6 +27,8 @@ public class button extends Application {
         thisstage.setHeight(400.0);
         thisstage.setScene(tohold);
         
+        //thisstage.setFullScreen(true);
+        
         thisstage.show();
         
     }
