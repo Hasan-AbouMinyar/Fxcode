@@ -21,7 +21,7 @@ import javafx.stage.Stage;
 import java.io.FileNotFoundException; // استيراد لمعالجة خطأ عدم العثور على ملف
 import java.nio.file.Paths; // استيراد لمساعدتنا في التعامل مع المسارات
 
-public class DigiGlobalStoreUI extends Application {
+public class DigiGlobal extends Application {
 
     // بيانات منتجات وهمية (يمكن استبدالها ببيانات حقيقية من قاعدة بيانات مثلاً)
     private static final Product[] sampleProducts = {
