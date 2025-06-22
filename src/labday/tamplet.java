@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package labday;
 
-/**
- *
- * @author abouminyar
- */
-public class tamplet {
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+
+public class tamplet extends Application {
+      @Override
+    public void start(Stage PrimaryStage){
+        
+        
+    }
     
+    public static void main (String[] args){
+        launch();
+    }
 }
