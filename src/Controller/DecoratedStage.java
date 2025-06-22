@@ -12,19 +12,27 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class DecoratedStage extends Application {
+//    @Override
+//    public void start(Stage stage) {
+//        stage.initStyle(StageStyle.DECORATED);
+//        stage.setTitle("Decorated Window");
+//
+//        // إضافة النص لعرض نوع النافذة
+//        Label label = new Label("This is a Decorated Window");
+//        StackPane root = new StackPane(label);
+//        Scene scene = new Scene(root, 300, 200);
+//
+//        stage.setScene(scene);
+//        stage.show();
+//    }
     @Override
-    public void start(Stage stage) {
-        stage.initStyle(StageStyle.DECORATED);
-        stage.setTitle("Decorated Window");
-
-        // إضافة النص لعرض نوع النافذة
-        Label label = new Label("This is a Decorated Window");
-        StackPane root = new StackPane(label);
-        Scene scene = new Scene(root, 300, 200);
-
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage blank){
+        
+        blank.initStyle(StageStyle.DECORATED);
+        
+        blank.show();
     }
+    
 
     public static void main(String[] args) {
         launch(args);
