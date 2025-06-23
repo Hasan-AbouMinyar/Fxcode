@@ -39,7 +39,7 @@ public class StackPaneExample extends Application {
         StackPane stackPane = new StackPane();
 
         // إضافة هامش حول الدائرة الأولى
-//        StackPane.setMargin(circle, new Insets(50, 50, 50, 50));
+        StackPane.setMargin(circle, new Insets(50, 50, 50, 50));
         
         // إضافة العناصر إلى الحاوية بالترتيب (الأول في الأسفل، الأخير في الأعلى)
         stackPane.getChildren().addAll(circle, circle1, text);
