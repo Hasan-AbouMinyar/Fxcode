@@ -31,6 +31,8 @@ public class Lect5Ex2 extends Application {
         yesBtn.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
         
         noBtn.setStyle("-fx-text-fill: white; -fx-background-color: blue;");
+        
+        scene.getStylesheets().add(getClass().getResource("fu.css").toExternalForm());
 
         stage.setScene(scene);
         stage.setTitle("Styling Buttons");
