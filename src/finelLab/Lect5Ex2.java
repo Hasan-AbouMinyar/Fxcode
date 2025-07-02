@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package finelLab;
 
 import javafx.application.Application;
@@ -6,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class Lect5Ex1 extends Application {
+public class Lect5Ex2 extends Application {
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -20,23 +24,13 @@ public class Lect5Ex1 extends Application {
 
         HBox root = new HBox();
         root.getChildren().addAll(yesBtn, noBtn, cancelBtn);
-
         Scene scene = new Scene(root,400,400);
-        // Add a style sheet to the scene
 
-//        scene.getStylesheets().add(getClass().getResource("/finelLab/styles.css").toExternalForm());
+        // --- هذا هو السطر المهم ---
+        // تطبيق التنسيق مباشرة على زر "Yes" فقط
+        yesBtn.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
         
-        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
-        
-        
-        
-        
-        
-        
-        
-        
-        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
-
+        noBtn.setStyle("-fx-text-fill: white; -fx-background-color: blue;");
 
         stage.setScene(scene);
         stage.setTitle("Styling Buttons");
