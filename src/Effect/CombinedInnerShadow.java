@@ -5,7 +5,6 @@
 package Effect;
 // اسم البكج، قد يختلف لديك
 
-
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -29,59 +28,46 @@ public class CombinedInnerShadow extends Application {
     @Override
     public void start(Stage primaryStage) {
         
-        // --- الإعداد العام للحاوية الرئيسية ---
-        // VBox لترتيب المثالين بشكل عمودي مع تباعد بينهما
         VBox root = new VBox(80); 
-        root.setPadding(new Insets(50)); // هوامش داخلية
-        root.setAlignment(Pos.CENTER); // محاذاة العناصر في المنتصف
+        root.setPadding(new Insets(50));
+        root.setAlignment(Pos.CENTER);
 
         // --- المثال الأول: الظل الداخلي المفصل على النص ---
         
-        [cite_start]// إنشاء عنصر النص [cite: 1]
         Text t1 = new Text();
-        t1.setText("InnerShadow Effect"); [cite_start]// تحديد النص [cite: 1]
-        t1.setFont(Font.font("Arial", FontWeight.BOLD, 40)); [cite_start]// تحديد الخط [cite: 1]
-        t1.setFill(Color.RED); [cite_start]// تحديد لون النص [cite: 1]
+        t1.setText("InnerShadow Effect");
+        t1.setFont(Font.font("Arial", FontWeight.BOLD, 40));
+        t1.setFill(Color.RED);
 
-        [cite_start]// إنشاء كائن الظل الداخلي [cite: 1]
         InnerShadow iseffect = new InnerShadow();
-        
-        [cite_start]// تحديد خصائص الظل الداخلي كما في الصورة [cite: 1]
-        iseffect.setRadius(5); [cite_start]// نصف قطر التمويه [cite: 1]
-        iseffect.setColor(Color.BLUE); [cite_start]// لون الظل [cite: 1]
-        iseffect.setOffsetX(7); [cite_start]// الإزاحة الأفقية للظل [cite: 1]
-        iseffect.setOffsetY(7); [cite_start]// الإزاحة العمودية للظل [cite: 1]
-        iseffect.setChoke(0.2); [cite_start]// تحديد مدى "اختناق" أو كثافة الظل قبل التمويه [cite: 1]
-        iseffect.setBlurType(BlurType.THREE_PASS_BOX); [cite_start]// تحديد خوارزمية التمويه [cite: 1]
+        iseffect.setRadius(5);
+        iseffect.setColor(Color.BLUE);
+        iseffect.setOffsetX(7);
+        iseffect.setOffsetY(7);
+        iseffect.setChoke(0.2);
+        iseffect.setBlurType(BlurType.THREE_PASS_BOX);
 
-        [cite_start]// تطبيق التأثير على النص [cite: 1]
         t1.setEffect(iseffect);
 
         // --- المثال الثاني: مشاركة نفس تأثير الظل الداخلي ---
         
-        // Group لوضع العناصر التي لها إحداثيات محددة
         Group sharedEffectGroup = new Group();
 
-        [cite_start]// إنشاء عنصر النص الثاني [cite: 1]
         Text textShared = new Text(10, 50, "Welcome to Lecture 7");
-        textShared.setFont(Font.font(null, FontWeight.BOLD, 40)); [cite_start]// تحديد الخط [cite: 1]
-        textShared.setFill(Color.RED); [cite_start]// تحديد اللون [cite: 1]
+        textShared.setFont(Font.font(null, FontWeight.BOLD, 40));
+        textShared.setFill(Color.RED);
 
-        [cite_start]// إنشاء عنصر الدائرة [cite: 1]
         Circle circleShared = new Circle(150.0F, 150.0F, 50.0F);
-        circleShared.setFill(Color.CORNFLOWERBLUE); [cite_start]// تحديد لون التعبئة [cite: 1]
+        circleShared.setFill(Color.CORNFLOWERBLUE);
         
-        [cite_start]// إنشاء كائن ظل داخلي واحد فقط لمشاركته [cite: 1]
         InnerShadow innerShadowShared = new InnerShadow();
-        innerShadowShared.setOffsetX(4); [cite_start]// الإزاحة الأفقية [cite: 1]
-        innerShadowShared.setOffsetY(4); [cite_start]// الإزاحة العمودية [cite: 1]
-        innerShadowShared.setColor(Color.GRAY); [cite_start]// لون الظل [cite: 1]
+        innerShadowShared.setOffsetX(4);
+        innerShadowShared.setOffsetY(4);
+        innerShadowShared.setColor(Color.GRAY);
 
-        [cite_start]// تطبيق نفس كائن الظل على كلا العنصرين [cite: 1]
         textShared.setEffect(innerShadowShared);
         circleShared.setEffect(innerShadowShared);
         
-        // إضافة العناصر إلى حاوية Group
         sharedEffectGroup.getChildren().addAll(textShared, circleShared);
 
         // --- إضافة كل الأمثلة إلى الحاوية الرئيسية ---
@@ -94,9 +80,6 @@ public class CombinedInnerShadow extends Application {
         primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
