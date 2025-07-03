@@ -30,9 +30,10 @@ public class SharedEffectExample extends Application {
 
         // إنشاء كائن DropShadow واحد فقط
         DropShadow dropShadow = new DropShadow(); 
-        dropShadow.setRadius(5); 
+        dropShadow.setRadius(4); 
         dropShadow.setOffsetX(8); 
-        dropShadow.setOffsetY(4); 
+        dropShadow.setOffsetY(4);
+        dropShadow.setSpread(100);
         dropShadow.setColor(Color.CORNSILK); 
 
         // تطبيق نفس كائن التأثير على كلا العنصرين
