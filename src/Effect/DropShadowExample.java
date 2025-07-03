@@ -25,8 +25,8 @@ public class DropShadowExample extends Application {
         // 2. إنشاء كائن DropShadow وتخصيص خصائصه
         DropShadow dropShadow = new DropShadow();
         dropShadow.setRadius(5.0);
-        dropShadow.setOffsetX(9.0);
-        dropShadow.setOffsetY(100.0);
+        dropShadow.setOffsetX(-9.0);
+        dropShadow.setOffsetY(9.0);
         dropShadow.setColor(Color.color(0.4, 0.5, 0.5)); // لون رمادي داكن
 
         // 3. تطبيق التأثير على النص
