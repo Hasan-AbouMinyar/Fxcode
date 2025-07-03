@@ -19,7 +19,7 @@ public class ImagePatternExample extends Application {
     @Override
     public void start(Stage stage) {
         // الخطوة 1: تحميل الصورة
-        Image img = new Image(getClass().getResource("blueRect.jpg").toExternalForm());
+        Image img = new Image(getClass().getResource("button.jpg").toExternalForm());
          // يفترض وجود هذا الملف في المشروع
 
         // إنشاء نمط للمستطيل الأول (r2)
