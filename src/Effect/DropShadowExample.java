@@ -27,6 +27,7 @@ public class DropShadowExample extends Application {
         dropShadow.setRadius(5.0);
         dropShadow.setOffsetX(-9.0);
         dropShadow.setOffsetY(9.0);
+        dropShadow.setWidth(100);
         dropShadow.setColor(Color.color(0.4, 0.5, 0.5)); // لون رمادي داكن
 
         // 3. تطبيق التأثير على النص
