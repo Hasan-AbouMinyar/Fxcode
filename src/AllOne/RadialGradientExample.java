@@ -22,11 +22,12 @@ public class RadialGradientExample extends Application {
 
         // إنشاء كائن التدرج اللوني الدائري
         // Radial gradient color 
-        RadialGradient gradient1 = new RadialGradient(0,
-                .0,
-                .1,
-                .1,
-                .9,
+        RadialGradient gradient1 = new RadialGradient(
+                90,
+                .5,
+                .5,
+                .5,
+                1,
                 true,
                 CycleMethod.NO_CYCLE,
                 new Stop(0, Color.RED),
