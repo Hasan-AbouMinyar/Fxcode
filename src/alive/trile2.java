@@ -30,12 +30,18 @@ public class trile2 extends Application {
        
        
        XYChart.Series red = new XYChart.Series();
-       red.setName("Libya");
-       red.getData().add(new XYChart.Data(2001,110));
-       red.getData().add(new XYChart.Data(2006,150));
-       red.getData().add(new XYChart.Data(2009 , 170));
-       red.getData().add(new XYChart.Data(2012,200 ));
-       red.getData().add(new XYChart.Data(2024, 110));
+       
+        red.setName("Libya");
+        
+        // تم تغيير الإحداثيات لرسم الشكل المطلوب
+        red.getData().add(new XYChart.Data(2002, 150)); // نقطة البداية المنخفضة على اليسار
+        red.getData().add(new XYChart.Data(2006, 150)); // نهاية الجزء المسطح الأيسر وبداية الصعود
+        red.getData().add(new XYChart.Data(2008, 280)); // الوصول إلى القمة
+        red.getData().add(new XYChart.Data(2013, 280)); // نهاية الجزء المسطح العلوي وبداية الهبوط
+        red.getData().add(new XYChart.Data(2015, 150)); // الوصول إلى الجزء المنخفض على اليمين
+        red.getData().add(new XYChart.Data(2022, 150)); // نهاية الجزء المسطح الأيمن
+
+        lc.getData().add(red);
        
        lc.getData().add(red);
        

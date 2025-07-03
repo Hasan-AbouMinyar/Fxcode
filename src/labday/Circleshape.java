@@ -13,7 +13,7 @@ public class Circleshape extends Application {
       @Override
     public void start(Stage forC){
         
-        Circle blackCircle = new Circle(200,200,70);
+        Circle blackCircle = new Circle(350,350,30);
         
         Group tohold = new Group();
         tohold.getChildren().add(blackCircle);
