@@ -24,10 +24,10 @@ public class RadialGradientExample extends Application {
         // Radial gradient color 
         RadialGradient gradient1 = new RadialGradient(
                 90,
+                .0,
                 .5,
                 .5,
-                .5,
-                1,
+                .4,
                 true,
                 CycleMethod.NO_CYCLE,
                 new Stop(0, Color.RED),
