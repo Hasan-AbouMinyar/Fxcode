@@ -3,59 +3,42 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package A_Today;
-
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
-class exppto extends Application {
+public class FlowPaneExample extends Application {
+
     @Override
-               public void start(Stage primaryStage) {
-        TextField tf = new TextField();
-        Button btn = new Button();
-        btn.setText("Add");        
-         TextField tf2 = new TextField();
-        Button btn2 = new Button();
-        btn2.setText("Mul");
-        Text t = new Text ("Result:");
-        Text here = new Text (""); 
-        btn.setOnAction(e-> {
-                double f= Double.parseDouble(tf.getText());
-                double s= Double.parseDouble(tf2.getText());
-                double sum = f+s;
-                here.setText(String.valueOf(sum));
-        });
-        btn2.setOnAction(e-> {
-                double f= Double.parseDouble(tf.getText());
-                double s= Double.parseDouble(tf2.getText());
-                double mul = f*s;
-                here.setText(String.valueOf(mul));            
-        });
-        HBox one = new HBox();
-        one.getChildren().addAll(tf,btn);
-        HBox two = new HBox();
-        two.getChildren().addAll(tf2,btn2);
-         HBox three = new HBox();
-        three.getChildren().addAll(t,here);
-        one.setSpacing(10);
-        two.setSpacing(10);
-        three.setSpacing(10);
-        VBox root = new VBox();
-        root.getChildren().addAll(one,two,three);
-        root.setSpacing(10);
-        Scene scene = new Scene(root, 300, 250);
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+    public void start(Stage stage) {
+        // إنشاء FlowPane مع الاتجاه الأفقي (default)
+        FlowPane flowPane = new FlowPane();
+        
+        // ضبط المسافات بين العناصر
+        flowPane.setHgap(10); // المسافة الأفقية 10 بكسل
+        flowPane.setVgap(10); // المسافة الرأسية 10 بكسل
+        
+        // إضافة حشو (Padding) داخلي 20 بكسل حول المحتوى
+        flowPane.setPadding(new Insets(20));
+        
+        // إضافة أزرار إلى FlowPane
+        for (int i = 1; i <= 15; i++) {
+            Button button = new Button("Button " + i);
+            flowPane.getChildren().add(button);
+        }
+        
+        // إنشاء المشهد ووضعه على المسرح
+        Scene scene = new Scene(flowPane, 100, 200);
+        stage.setTitle("FlowPane Example");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
-    
 }
