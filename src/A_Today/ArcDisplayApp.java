@@ -46,11 +46,12 @@ public class ArcDisplayApp extends Application {
         A5.setType(ArcType.ROUND);
 
         // Layout container
-        HBox root = new HBox(A1, A2, A3, A4, A5);
+        HBox root = new HBox();
+        root.getChildren().addAll(A1, A2, A3, A4, A5);
         
         
         Group amg = new Group();
-        Arc amd = new Arc(100, 110, 50, 100, 0, 90);
+        Arc amd = new Arc(0, 0, 50, 100, 0, 90);
         amd.setFill(Color.LIGHTGRAY);
         amg.getChildren().addAll(amd,root);
         
