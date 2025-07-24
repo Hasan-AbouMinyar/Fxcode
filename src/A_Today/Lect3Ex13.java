@@ -26,7 +26,7 @@ public class Lect3Ex13 extends Application {
             370.0, 150.0,
             325.0, 170.0,
             290.0, 150.0,
-           
+            200.0, 150.0,
             
            
         });
